@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Links</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #150a0a;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+      }
+      .note-box {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        padding-left: 20px;
+        border-radius: 8px;
+        font-family: "Courier New", Courier, monospace;
+        width: 20%;
+      }
+      .content {
+        display: flex;
+        align-items: center;
+      }
+      .button-container {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .custom-button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+      }
+      .custom-button:hover {
+        background-color: #45a049;
+      }
+      @media (max-width: 600px) {
+        body {
+          background-color: black;
+          border: 2px solid white;
+          flex-direction: column;
+        }
+        .button-container {
+          padding-left: 0;
+        }
+        .note-box {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+      .tagline {
+        font-family: "Courier New", Courier, monospace;
+        color: white;
+        margin-top: auto;
+        padding-bottom: 20px;
+        text-align: center;
+      }
+      h1 {
+        color: white;
+        font-size: 36px;
+        text-align: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flood Relief Starts with You: Donate Today</h1>
+    <div class="container">
+      <div class="note-box">
+        <p><b>Help Us Rebuild Lives After the Flood</b></p>
+        <p>
+          The recent floods have devastated countless families, leaving them
+          without homes, food, and basic necessities. Your generous donation can
+          make a significant difference in their lives. By contributing, you are
+          providing immediate relief and helping to rebuild communities.
+          Together, we can bring hope and restore normalcy to those affected.
+          <b>Those who need</b> necessary supplies like <b>food</b>,
+          <b>click the request button</b>.
+        </p>
+      </div>
+      <div class="content">
+        <img src="hands.png" alt="logo" />
+        <div class="button-container">
+          <!-- Updated URLs -->
+          <button
+            class="custom-button"
+            onclick="openLink('http://localhost:8081/')"
+          >
+            <b>Donate</b>
+          </button>
+          <button
+            class="custom-button"
+            onclick="openLink('http://localhost:8082')"
+          >
+            <b>Request</b>
+          </button>
+          <button
+            class="custom-button"
+            onclick="openLink('http://localhost:8083')"
+          >
+            <b>View Requests</b>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="tagline">
+      <b>Rise Above the Flood: Your Help, Their Hope</b>
+    </div>
+
+    <script>
+      function openLink(link) {
+        window.open(link, "_blank");
+      }
+    </script>
+  </body>
+</html>
